@@ -81,7 +81,7 @@
             textBox2.AutoCompleteMode = AutoCompleteMode.Suggest;
             textBox2.Font = new Font("Segoe UI", 50F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.HideSelection = false;
-            textBox2.Location = new Point(518, -9);
+            textBox2.Location = new Point(-106, -17);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ShortcutsEnabled = false;
@@ -152,6 +152,7 @@
             MatrixARowTrackBar.Size = new Size(45, 190);
             MatrixARowTrackBar.TabIndex = 3;
             MatrixARowTrackBar.TickStyle = TickStyle.None;
+            MatrixARowTrackBar.Scroll += MatrixARowTrackBar_Scroll;
             MatrixARowTrackBar.ValueChanged += MatrixARowTrackBar_ValueChanged;
             // 
             // MatrixAColumnTrackBar
@@ -167,6 +168,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(textBox2);
             panel2.Controls.Add(btnMatrixBRightArrow);
             panel2.Controls.Add(btnMatrixBLeftArrow);
             panel2.Controls.Add(btnMatrixBDownArrow);
@@ -226,6 +228,7 @@
             MatrixBRowTrackBar.Size = new Size(45, 193);
             MatrixBRowTrackBar.TabIndex = 1;
             MatrixBRowTrackBar.TickStyle = TickStyle.None;
+            MatrixBRowTrackBar.Scroll += MatrixBRowTrackBar_Scroll;
             MatrixBRowTrackBar.ValueChanged += MatrixBRowTrackBar_ValueChanged;
             // 
             // MatrixBColumnTrackBar
@@ -235,6 +238,7 @@
             MatrixBColumnTrackBar.Size = new Size(219, 45);
             MatrixBColumnTrackBar.TabIndex = 2;
             MatrixBColumnTrackBar.TickStyle = TickStyle.None;
+            MatrixBColumnTrackBar.Scroll += MatrixBColumnTrackBar_Scroll;
             MatrixBColumnTrackBar.ValueChanged += MatrixBColumnTrackBar_ValueChanged;
             // 
             // panel3
@@ -261,7 +265,7 @@
             panel3.Controls.Add(btnAB);
             panel3.Controls.Add(btnAMinusB);
             panel3.Controls.Add(btnAPlusB);
-            panel3.Location = new Point(93, 262);
+            panel3.Location = new Point(93, 373);
             panel3.Name = "panel3";
             panel3.Size = new Size(850, 452);
             panel3.TabIndex = 2;
@@ -491,7 +495,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1123, 621);
-            Controls.Add(textBox2);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -509,7 +512,6 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
