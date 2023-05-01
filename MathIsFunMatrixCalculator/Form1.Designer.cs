@@ -30,6 +30,7 @@
         {
             TextBox textBox2;
             panel1 = new Panel();
+            textBox1 = new TextBox();
             btnMatrixARightArrow = new Button();
             btnMatrixALeftArrow = new Button();
             btnMatrixADownArrow = new Button();
@@ -37,6 +38,7 @@
             MatrixARowTrackBar = new TrackBar();
             MatrixAColumnTrackBar = new TrackBar();
             panel2 = new Panel();
+            textBox3 = new TextBox();
             btnMatrixBRightArrow = new Button();
             btnMatrixBLeftArrow = new Button();
             btnMatrixBDownArrow = new Button();
@@ -93,6 +95,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(btnMatrixARightArrow);
             panel1.Controls.Add(btnMatrixALeftArrow);
             panel1.Controls.Add(btnMatrixADownArrow);
@@ -103,6 +106,14 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(418, 406);
             panel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(88, 153);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(287, 174);
+            textBox1.TabIndex = 8;
             // 
             // btnMatrixARightArrow
             // 
@@ -153,7 +164,6 @@
             MatrixARowTrackBar.TabIndex = 3;
             MatrixARowTrackBar.TickStyle = TickStyle.None;
             MatrixARowTrackBar.Scroll += MatrixARowTrackBar_Scroll;
-            MatrixARowTrackBar.ValueChanged += MatrixARowTrackBar_ValueChanged;
             // 
             // MatrixAColumnTrackBar
             // 
@@ -163,11 +173,11 @@
             MatrixAColumnTrackBar.TabIndex = 0;
             MatrixAColumnTrackBar.TickStyle = TickStyle.None;
             MatrixAColumnTrackBar.Scroll += MatrixAColumnTrackBar_Scroll;
-            MatrixAColumnTrackBar.ValueChanged += MatrixAColumnTrackBar_ValueChanged;
             // 
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(textBox3);
             panel2.Controls.Add(textBox2);
             panel2.Controls.Add(btnMatrixBRightArrow);
             panel2.Controls.Add(btnMatrixBLeftArrow);
@@ -179,6 +189,14 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(418, 406);
             panel2.TabIndex = 1;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(91, 153);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(287, 174);
+            textBox3.TabIndex = 12;
             // 
             // btnMatrixBRightArrow
             // 
@@ -229,7 +247,6 @@
             MatrixBRowTrackBar.TabIndex = 1;
             MatrixBRowTrackBar.TickStyle = TickStyle.None;
             MatrixBRowTrackBar.Scroll += MatrixBRowTrackBar_Scroll;
-            MatrixBRowTrackBar.ValueChanged += MatrixBRowTrackBar_ValueChanged;
             // 
             // MatrixBColumnTrackBar
             // 
@@ -239,7 +256,6 @@
             MatrixBColumnTrackBar.TabIndex = 2;
             MatrixBColumnTrackBar.TickStyle = TickStyle.None;
             MatrixBColumnTrackBar.Scroll += MatrixBColumnTrackBar_Scroll;
-            MatrixBColumnTrackBar.ValueChanged += MatrixBColumnTrackBar_ValueChanged;
             // 
             // panel3
             // 
@@ -554,5 +570,7 @@
         private TextBox outTxt;
         private TextBox txtConstant;
         private TextBox textBox2;
+        private TextBox textBox1;
+        private TextBox textBox3;
     }
 }
